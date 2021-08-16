@@ -1,0 +1,73 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %} {{ news.title }} {% endblock %}
+
+{% block description %}{{ news.description|slice:":180" }}{% endblock %}
+{% block og_description %}{{ news.description|slice:":180" }}{% endblock %}
+{% block og_title %}{{ news.title }}{% endblock %}
+{% block img_intro %} {{ news.image.url }} {% endblock %}
+{% block keywords %} {{ news.title }} {% endblock %}
+
+{% block content %}
+
+
+<br>
+<br>
+<br>
+<br>
+
+<section class="container">
+    <div>
+        <div  style="width: 100%; text-align: center; margin-top: 5%">
+            <img style="width: 70% " src="{{ news.image.url }}">
+
+        </div>
+    </div>
+    <div class="text-center">
+        <h1>{{ news.title }}</h1>
+    </div>
+    <p>{{ news.description|linebreaksbr }}</p>
+
+
+    <div class="row">
+        <div class="col-md-3">
+            <a href="{{ news.image1.url }}" target="_blank" class="imgnews_intro">
+                <img class="imgnews Iner_poslugi" width="100%" src="{{ news.image1.url }}" alt="Опис">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="{{ news.image1.url }}" target="_blank" class="imgnews_intro">
+                <img class="imgnews Iner_poslugi" width="100%" src="{{ news.image2.url }}" alt="Опис">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="{{ news.image1.url }}" target="_blank" class="imgnews_intro">
+                <img class="imgnews Iner_poslugi" width="100%" src="{{ news.image3.url }}" alt="Опис">
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="{{ news.image1.url }}" target="_blank" class="imgnews_intro">
+                <img class="imgnews Iner_poslugi" width="100%" src="{{ news.image4.url }}" alt="Опис">
+            </a>
+        </div>
+    </div>
+
+
+    <p>{{ news.descriptione|linebreaksbr }}</p>
+    <div>
+        <p>Дата публікації: <strong>f</strong></p>
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+{% endblock %}

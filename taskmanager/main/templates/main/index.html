@@ -1,0 +1,228 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Туристична Агенція Your Planet|Гарячі Тури до Карпат та Європи{% endblock %}
+
+{% block description %}Туристична агенція у Луцьку Your Planet. Гарячі тури. Знижки! Авторські автобусні тури по Україні та за кордон! 2550 грн. Забронювати тур.{% endblock %}
+{% block og_description %}Туристична агенція у Луцьку Your Planet. Гарячі тури. Знижки! Авторські автобусні тури по Україні та за кордон! 2550 грн. Забронювати тур.{% endblock %}
+{% block og_title %}Туристична Агенція Your Planet|Гарячі Тури до Карпат та Європи{% endblock %}
+{% block img_intro %} {% static 'slider/5.jpg' %} {% endblock %}
+{% block keywords %} Гарячі тури Туристична агенція Тури до Карпат з Луцька Піп Іван Рафтинг {% endblock %}
+
+
+{% block content %}
+<div id="mySlider" class="carousel slide slider sliderfon " data-ride="carousel">
+      <div  class="title-slider  text-center">
+          <div >
+
+                     <a  style=" margin: 30% 0 0 0;" class="btn btn-poshuk" href="aviaIndex.html">ПОШУК ТУРУ</a>
+          </div>
+
+
+      </div>
+    <ol class="carousel-indicators">
+        <li data-target="#mySlider" data-slide-to="0"></li>
+        <li data-target="#mySlider" data-slide-to="1" class="active"></li>
+        <li data-target="#mySlider" data-slide-to="2"></li>
+        <li data-target="#mySlider" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner ">
+        <div class="carousel-item">
+            <a href="#"><img src="{% static 'slider/1.jpg' %}" alt="Раннє бронювання" class="d-block w-100 imgslider"></a>
+        </div>
+        <div class="carousel-item active">
+            <a href="#"><img src="{% static 'slider/3.jpg' %}" alt="Квадринг" class="d-block w-100 imgslider"></a>
+        </div>
+        <div class="carousel-item ">
+            <a href="#"><img src="{% static 'slider/4.jpg' %}" alt="Буковель" class="d-block w-100 imgslider"></a>
+        </div>
+        <div class="carousel-item">
+            <a href="#"><img src="{% static 'slider/5.jpg' %}" alt="Гарячі тури" class="d-block w-100 imgslider"></a>
+        </div>
+    </div>
+    <a href="#mySlider" style="z-index: 1000" class="carousel-control-prev" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a href="#mySlider" style="z-index: 1000" class="carousel-control-next" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+</div>
+
+
+<section class="container  container-fluid" >
+    <h1 class="text-center">Туристична Агенція Your Planet</h1>
+</section>
+
+<!--Пошук турів-->
+<div class="container poshuk_turiv" style="z-index: 9999999" id="yak1">
+    <div class="poshukmargine"></div>
+    <script>
+        var osGeo = '';
+        var osDefaultDeparture = '';
+        var osDefaultDuration = '';
+        var osTarget = '';
+        var osContainer = null;
+        var osTourContainer = null;
+        var osLang = 'ua';
+        var osTourTargetBlank = false;
+        var osOrderUrl = null;
+        var osCurrency = 'converted';
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic" rel="stylesheet">
+    <link rel="Stylesheet" href="https://export.otpusk.com/os/onsite/form.css" type="text/css" />
+    <link rel="Stylesheet" href="https://export.otpusk.com/os/onsite/result.css" type="text/css" />
+    <link rel="Stylesheet" href="https://export.otpusk.com/os/onsite/tour.css" type="text/css" />
+    <script src="https://export.otpusk.com/api/session?access_token=30f4c-c2fdc-09e4c-1bbfd-5a203"></script>
+    <script src="https://export.otpusk.com/js/onsite/"></script>
+    <script src="https://export.otpusk.com/js/order"></script>
+
+
+</div>
+
+<!-- Ми пропонуємо-->
+<div class="containerbackgraund">
+<section class="container ">
+    <h2 class="text-center">Ми пропонуємо</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <a href="aviaIndex.html" class="text-center text-decoration-none travel_intro">
+                <div class="img-fluid travel_item">
+                  <img class=" travel_img" src="{% static 'travel/1.gif' %}" alt="Авіатури">
+                </div>
+                <h3>Авіатури</h3>
+                <p class="travel_text">Єгипет, Туреччина, Кіпр, Іспанія, Італія, ОАЕ, Домініканська республіка</p>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a href="avtorindex.html" class="text-center text-decoration-none travel_intro">
+                <div class="img-fluid travel_item">
+                    <img class=" travel_img" src="{% static 'travel/3.gif' %}" alt="Автобусні тури">
+                </div>
+                <h3>Авторські тури з Луцька</h3>
+                <p class="travel_text">Відпочинок в карпатах із Луцька. Рафтинг, квадринг, термальні води, лижні тури </p>
+            </a>
+        </div>
+    </div>
+</section>
+</div>
+
+<section class="container">
+    <hr>
+    <div class="row">
+
+
+        {% for el in news %}
+            <div class="col-md-6 rowiner">
+             <div class="Iner_poslugi Iner_poslugif">
+                 <div class="text-center">
+                        <div>
+                         <h3>{{ el.title }}</h3>
+                        </div>
+                        <div>
+                            <p>{{ el.data }}</p>
+                        </div>
+                        <div class="text-center">
+                             <p>{{ el.descriptions }}</p>
+                         </div>
+                        <div>
+                            <a href="/{{el.url}}" class="btn btn-secondary ">
+                              Детальніше
+                             </a>
+                        </div>
+
+                 </div>
+                </div>
+             </div>
+        {% endfor %}
+
+
+    </div>
+
+</section>
+
+<div class="containerbackgraund">
+<section class="container">
+    <hr>
+    <div class="text-center">
+        <h2>Туристичні послуги</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="Iner_poslugi Iner_poslugif">
+                 <div class="title_poslugi ">
+                     <div class="title_poslugi_title">
+                         <h3 class="poxlugiinfo"><strong>Продаж турів</strong></h3>
+                     </div>
+                     <div class="text_poslugi text-center">
+                          <p>Компанія Your Planet організує Ваш відпочинок враховуючи усі побажання.  У нас знайдеться тур для кожного туриста.</p>
+                      </div>
+                 </div>
+                 <div class="img_poslugi">
+                    <img src="{% static 'poslugi/1.jpg' %}" alt="Послуги">
+                 </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="Iner_poslugi Iner_poslugif">
+                <div class="title_poslugi">
+                    <div class="title_poslugi_title">
+                        <h3 class="poxlugiinfo"><strong>Авіаквитки</strong></h3>
+                    </div>
+                    <div class="text_poslugi text-center">
+                        <p>Здійснюємо продаж квитків на внутрішні та закордонні рейси. Також можливо створити комбінований маршрут з пересадкою.</p>
+                    </div>
+                </div>
+                <div class="img_poslugi">
+                    <img src="{% static 'poslugi/2.jpg' %}" alt="Авіаквитки">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row2">
+        <div class="col-md-6">
+            <div class="Iner_poslugi Iner_poslugif">
+                <div class="title_poslugi">
+                    <div class="title_poslugi_title">
+                        <h3 class="poxlugiinfo"><strong>Закордонні паспорти</strong></h3>
+                    </div>
+                    <div class="text_poslugi text-center">
+                        <p>Краще довірити нам процес оформлення необхідних документів. </p>
+                    </div>
+                </div>
+                <div class="img_poslugi ">
+                    <img class="images"  src="{% static 'poslugi/3.jpg' %}" alt="Закордонні паспорти">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="Iner_poslugi Iner_poslugif">
+                <div class="title_poslugi">
+                    <div class="title_poslugi_title">
+                        <h3 class="poxlugiinfo"><strong>Страхування</strong></h3>
+                    </div>
+                    <div class="text_poslugi text-center">
+                        <p>Страхування усіх туристів дає змогу отримати медичну допомогу будь-де у світі.</p>
+                    </div>
+                </div>
+                <div class="img_poslugi ">
+                    <img class="images"  src="{% static 'poslugi/4.jpg' %}" alt="Страхування">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

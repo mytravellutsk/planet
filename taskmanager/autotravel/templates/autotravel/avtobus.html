@@ -1,0 +1,103 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Автобусні тури з Луцька до Карпати|Your Planet{% endblock %}
+
+{% block description %}Туристична агенція у Луцьку Your Planet. Гарячі тури. Знижки! Авторські автобусні тури по Україні та за кордон! 2550 грн. Забронювати тур Онлайн.{% endblock %}
+{% block og_description %}Туристична агенція у Луцьку Your Planet. Гарячі тури. Знижки! Авторські автобусні тури по Україні та за кордон! 2550 грн. Забронювати тур Онлайн.{% endblock %}
+{% block og_title %}Автобусні тури з Луцька до Карпати|Your Planet{% endblock %}
+{% block img_intro %} {% static 'bacgraundimage/16.jpg' %} {% endblock %}
+{% block keywords %}  {% endblock %}
+
+{% block content %}
+
+<div class="avtoindexbackgaund">
+    <img class="avtoindexbackgaundimg" src="{% static 'bacgraundimage/16.jpg' %}" alt="Похід на Піп Іван із Луцька">
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<section class="container">
+    <h1 class="text-center avtoindextitle">Автобусні тури з Луцька в Карпати</h1>
+
+    <div class="row">
+
+        {% for el in avtobus %}
+        <div itemscope itemprop="offers"  itemtype="https://schema.org/Offer" class="col-md-4 avtoindexcol">
+            <a itemprop="url" href="{% url 'avtobus_list' el.url %}">
+                <div class="Iner_avtoindex">
+                    <img style=" width: 100%" src="{{ el.image.url }}" alt="{{ el.title }}">
+                    <h2 itemprop = "name">{{ el.title }}</h2>
+                    <p  style="font-size: 17px; color: black">Дати виїздів:
+                        {{ el.date }}</p>
+                    <p itemprop="priceCurrency" style="font-size: 30px; font-weight: 700">2550 грн</p>
+                    <button  class="btn-light btn_avtoindex" href="{% url 'avtobus_list' el.url %}">Детальніше</button>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+
+
+    </div>
+
+
+</section>
+
+
+<br><br><br><br>
+<section class="containerdirect">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="text-center">
+                    <img  style="width: 60%" src="{% static 'director/1.gif' %}" alt="Стрижевський Богдан">
+                    <h2>Гід туристичної агенції</h2>
+                    <h3>Стрижевський Богдан</h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p class="text-center">З дитинства люблю подорожувати по тихих куточках України. Захоплююся красою Українських Карпатських гір та річок. Вивчаю Україну з кожним новим автобусним туром в який їду разом із вами. Кожен тур є унікальним, завжди стараємося показати туристам щось нове. Найбільше люблю активний відпочинок, сплав по річці,  вело прогулянка чи похід у гори. Проведемо час весело та з користю разом із Your Planet.
+
+                </p>
+                <div class="btn_click_iner">
+                 <div class="btn_click">
+                    <a href="https://www.instagram.com/bodyast1010/" target="_blank"><i class="fab fa-instagram" ></i> instagram</a>
+                 </div>
+                </div>
+                <br>
+                <div class="btn_click_iner">
+                    <div class="btn_click">
+                        <a href="https://www.facebook.com/profile.php?id=100006274125553" target="_blank"><i class="fab fa-facebook"></i></i> facebook</a>
+                    </div>
+                </div>
+                <br>
+                <div class="btn_click_iner">
+                    <div class="btn_click">
+                        <a href="viber://chat?number=0955574694" target="_blank"><i class="fab fa-viber"></i></i> viber</a>
+                    </div>
+                </div>
+                <br>
+                <div class="btn_click_iner">
+                    <a class="text_nav_color" href="tel:+380969682493">+3 (809) 5557-46-94</a>
+                </div>
+                <div class="btn_click_iner">
+                    <a class="text_nav_color" href="tel:+380971069942">+3 (809) 7106-99-42</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</section>
+
+
+
+
+
+
+
+
+{% endblock %}

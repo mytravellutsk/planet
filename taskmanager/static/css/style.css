@@ -1,0 +1,525 @@
+body {
+    background: #d7d7d7;
+    display: block;
+    font-size: 16px;
+    font-family: 'Acme', sans-serif;
+}
+a {
+    color: #5a6268;
+}
+a:hover {
+    text-decoration: none;
+    color: #bdbdbd;
+}
+.navstyle {
+    opacity: 0.9;
+}
+.navinfo {
+    display: flex;
+    font-size: 11px;
+}
+.header-info_text {
+    padding-right: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+}
+.text_nav_color{
+    color: #ffffff;
+}
+
+td, th {
+    color: white;
+    padding: 0 30px;
+}
+.logo {
+    max-width: 250px;
+    height: auto;
+}
+.slider {
+    margin-top: 93px;
+}
+.img-fluid {
+    height: 350px;
+    width: auto;
+}
+
+.batton {
+    margin-left: 2px;
+    border-radius: 50%;
+    font-size: 35px;
+    transition-duration: 1s;
+}
+.batton:hover {
+    transform: scale(1.1);
+    transition-duration: 1s;
+}
+.btn-poshuk {
+    background-color: #54a3e6;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition-duration: 1s;
+    opacity: 0.7;
+}
+.btn-poshuk:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    transition-duration: 1s;
+}
+
+
+
+.text-decoration-none {
+    color: black;
+}
+.text-decoration-none:hover {
+    color: black;
+    opacity: 0.5;
+
+}
+.text-center {
+    margin-top: 50px;
+}
+.opacity:hover {
+    opacity: 0.5;
+}
+.news {
+    margin-top: 150px;
+}
+.newsblock {
+    display: flex;
+}
+/*.imgslider {
+
+    opacity: 0.5;
+    background-color: black;
+}
+*/
+
+.sliderfon {
+    background: black;
+}
+.title-slider {
+    z-index: 1000;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.title {
+    font-family: 'Acme', sans-serif;
+    font-size: 120px;
+    transition-duration: 0.8s;
+}
+.title:hover {
+    transform: scale(1.1);
+    transition-duration: 1s;
+}
+.rewievs {
+    width: 80%;
+    z-index: 1;
+}
+.carousel-control-next-icon {
+    z-index: 999999;
+}
+
+.worksrow {
+    width: 350px;
+}
+
+.text-color {
+    color: #fff;
+}
+.text_style {
+    font-family: 'Acme', sans-serif;
+}
+
+.text-center {
+    margin: 80px 0;
+}
+.travel_item {
+    height: auto;
+    position: relative;
+}
+.travel_text {
+    padding: 10px 30px;
+    color: black;
+}
+
+.travel_img {
+    max-width: 200px;
+    height: auto;
+    transition-duration: 0.8s;
+
+}
+
+.travel_img:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition-duration: 1s;
+
+}
+
+
+
+.image_item {
+    margin-top: 20px;
+    text-decoration-line: none;
+    transition-duration: 1s;
+}
+.image_item:hover {
+    opacity: 0.8;
+    transition-duration: 1s;
+
+}
+
+
+
+.popular_a {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.popular_text {
+    text-align: center;
+    margin-top: 20px;
+}
+.popular_title {
+    color: black;
+}
+
+
+.img_popular {
+    height: 255px;
+    width: auto;
+    transition-duration: 1s;
+
+
+}
+.img_popular:hover {
+    transform: scale(1.1);
+    transition-duration: 1s;
+    box-shadow: 10px 10px 10px 10px #171a1d;
+}
+
+
+
+.Iner_poslugi {
+    display: flex;
+    border: 1px solid #ffffff;
+    padding: 20px;
+    transition-duration: 1s;
+    background-color: #e2e2e2;
+}
+
+.Iner_poslugif {
+    height: 100%;
+}
+.poxlugiinfo {
+    font-size: 1rem;
+}
+.title_poslugi_title {
+    padding: 0 20px;
+}
+.text_poslugi {
+    padding: 0 25px;
+}
+.img_poslugi {
+    padding-top: 40px;
+    transition-duration: 0.8s;
+}
+.img_poslugi:hover {
+    transform: translate(10px, 0px);
+    transition-duration: 0.8s;
+
+}
+
+
+.Iner_poslugi:hover {
+    transform: translate(0px, -8px);
+    transition-duration: 0.8s;
+    box-shadow: 10px 10px 10px 10px #171a1d;
+}
+.row2 {
+    margin-top: 30px;
+}
+.images {
+    width: 130px;
+    height: 190px;
+    object-fit: cover;
+}
+
+.fotercopy {
+    margin: 0 auto;
+}
+
+.disane {
+    color: #1b1e21;
+    display: flex;
+}
+.disane:hover {
+    color: #5a6268;
+}
+
+.vidgukinfo {
+    display: flex;
+}
+.poshukmargine {
+    margin: 50px auto;
+}
+
+
+
+.imgaviaindex {
+    z-index: 1;
+    width: 100%;
+}
+
+
+
+
+.egiptpolitry {
+    height: 310px;
+}
+.egiptpolitryimg {
+    width: 100%;
+}
+
+
+.topbutton {
+    width:100px;
+    border:2px solid #ccc;
+    background:#f7f7f7;
+    text-align:center;
+    padding:10px;
+    position:fixed;
+    bottom:50px;
+    right:50px;
+    cursor:pointer;
+    color:#333;
+    font-size:12px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+}
+
+
+.chomuunas {
+    width: 100%;
+    background-color: #c3c3c3;
+    border: 1px solid #b3b3b3;
+    padding: 15px;
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+
+.goraschieTur {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    position: fixed;
+
+}
+.goraschieTurfon {
+    background-color: #5a6268;
+    background: rgba(195, 195, 195, 0.6);
+    color: black;
+}
+.goraschieTurfonp {
+    background-color: #5a6268;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+.bukovelitem {
+    display: flex;
+}
+
+.bukoveltelephone {
+    font-size: 30px;
+    color: #6b6b6b;
+    font-weight: 700;
+}
+
+
+.avtoindexbackgaund {
+    width: 100vh;
+    z-index: -3;
+}
+.avtoindexbackgaundimg {
+    height: 120vh;
+    width: auto;
+    overflow: hidden;
+    opacity: 0.4;
+    z-index: -3;
+    position: fixed;
+    margin-top: -100px;
+}
+
+.Iner_avtoindex {
+    height: 100%;
+    margin-top: 10px;
+    display: block;
+    padding: 20px;
+    transition-duration: 1s;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: #5a6268;
+    background: rgba(96, 96, 96, 0.8);
+    color: #ffffff;
+
+}
+.Iner_avtoindex:hover {
+    transform: translate(0px, -8px);
+    transition-duration: 0.8s;
+    box-shadow: 10px 10px 10px 10px #171a1d;
+}
+
+.btn_avtoindex {
+    border-radius: 20px;
+    font-weight: 600;
+    color: #5a6268;
+}
+.avtoindextitle {
+    font-weight: 700;
+    color: #535353;
+}
+.avtoindexcol {
+    margin-bottom: 15px;
+}
+
+.avtoindexbody {
+    opacity: 0.2;
+}
+
+.link_ozero {
+    text-decoration: none;
+    border: none;
+    color: black;
+    transition-duration: 3s;
+}
+
+.link_ozero:hover {
+    color: #fbfbfb;
+    transition-duration: 0.4s;
+}
+
+.btn_introform {
+    text-align: right;
+    margin-top: 30%;
+    margin-left: 86%;
+
+}
+
+.containerbackgraund {
+    background-color: #cacaca;
+}
+
+
+.imgdirector {
+    position: center;
+}
+
+.containerdirect {
+    background-color: #5a6268;
+
+}
+.btn_click {
+    background-color: #f8f9fa;
+    display: inline;
+    border: 1px solid #343a40;
+    padding: 3px 50px;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+}
+
+.btn_click:hover {
+    padding: 3px 70px;
+    transition-duration: 0.4s;
+
+}
+.btn_click_iner {
+    width: 100%;
+    text-align: center;
+}
+
+.page404 {
+    font-size: 200px;
+    text-align: right;
+}
+
+.click_btn {
+    font-size: 22px;
+    margin: 1px;
+}
+.info_texts {
+    font-size: 2em;
+}
+
+.imgnews_intro {
+    width: 90%;
+    height: auto;
+}
+.imgnews {
+    width: 90%;
+    height: auto;
+}
+
+.rowiner {
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1190px) {
+    .navinfo {
+        display: none;
+    }
+
+
+}
+
+
+
+
+
+
+
+@media (max-width: 770px) {
+    .title {
+        display: none;
+    }
+    .subtitle {
+        display: none;
+    }
+    .egiptpolitry {
+        height: 480px;
+
+    }
+    .egiptpolitryimg {
+        max-height: 70%;
+        width: auto;
+    }
+    .title-slider {
+        display: none;
+    }
+    .goraschieTur {
+        display: none;
+    }
+    .btn_form {
+        width: 80%;
+    }
+    .aviainfo {
+        display: none;
+    }
+
+}

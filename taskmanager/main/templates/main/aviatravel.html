@@ -1,0 +1,88 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Туристична агенція Your Planet{% endblock %}
+
+{% block description %}Туристична агенція у Луцьку Your Planet. Гарячі тури. Знижки! Авторські автобусні тури по Україні та за кордон! 2550 грн. Забронювати тур Онлайн.{% endblock %}
+{% block og_description %}Туристична агенція у Луцьку Your Planet. Гарячі тури. Знижки! Авторські автобусні тури по Україні та за кордон! 2550 грн. Забронювати тур Онлайн.{% endblock %}
+{% block og_title %}Туристична агенція у Луцьку Your Planet. Гарячі тури.{% endblock %}
+{% block img_intro %} {% static 'slider/5.jpg' %} {% endblock %}
+{% block keywords %}  {% endblock %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="text-center">
+
+    <h1>Авіатури онлайн</h1>
+</div>
+
+
+
+<div class=" container poshuk_turiv">
+
+    <script>
+        var osGeo = '';
+        var osDefaultDeparture = '';
+        var osDefaultDuration = '';
+        var osTarget = '';
+        var osContainer = null;
+        var osTourContainer = null;
+        var osLang = 'ua';
+        var osTourTargetBlank = false;
+        var osOrderUrl = null;
+        var osCurrency = 'converted';
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic" rel="stylesheet">
+    <link rel="Stylesheet" href="https://export.otpusk.com/os/onsite/form.css" type="text/css" />
+    <link rel="Stylesheet" href="https://export.otpusk.com/os/onsite/result.css" type="text/css" />
+    <link rel="Stylesheet" href="https://export.otpusk.com/os/onsite/tour.css" type="text/css" />
+    <script src="https://export.otpusk.com/api/session?access_token=30f4c-c2fdc-09e4c-1bbfd-5a203"></script>
+    <script src="https://export.otpusk.com/js/onsite/"></script>
+    <script src="https://export.otpusk.com/js/order"></script>
+
+
+</div>
+
+<section class="container aviainfo">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Відділ бронювання</h2>
+            <p>Автоматичний пошук турів із усіх туроператорів. А також автоматична перевірка ціни вибраної вами пропозиції. Виліт із Києва, Львова, Одеси, Запоріжжя, Дніпра, Чернігова та Харкова.
+
+                <br>
+                <br>Після вибору потрібно натиснути <strong>«Замовити тур»</strong>, заповнити заявку, ваше Ім’я та номер телефону. Та у найближчий термін наші менеджери перевірять заявку та зв’яжуться з вами для подальшого оформлення документів.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h2>Важливо знати</h2>
+            <a href="plrtestEGIPT.html">-Плр-Тестування COVID-19. Актуальна інформація </a>
+            <br>
+            <a href="goryachiturywhot.html">-Як обрати <strong>гарячий</strong> тур? </a>
+            <br>
+            <a href="proNas.html">-Туристична агенція Your Planet</a>
+        </div>
+    </div>
+
+
+</section>
+
+
+
+
+
+<div class="imgaviaindex">
+    <p style="text-align: center;">
+        <img style="width: 100%" src="{% static 'aviaindex/aircraft-2114464.jpg' %}">
+    </p>
+
+</div>
+<img src="{% static 'aviaindex/airo.jpg' %}" style="width: 100%" alt="">
+
+
+
+{% endblock %}

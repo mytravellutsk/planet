@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+    <script src="https://kit.fontawesome.com/66a67ad309.js" crossorigin="anonymous"></script>
+
+
+    <title>{% block title %} {% endblock %}</title>
+    <meta name=description content="{% block description%} {% endblock %}"/>
+    <meta property="og:description" content="{% block og_description%} {% endblock %}" />
+    <meta property="og:title" content="{% block og_title%} {% endblock %}"/>
+    <meta property="og:image" content="{% block og_image%} {% endblock %}"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'icon/icon-16.png'%}">
+    <meta property="og:image" content="{% block img_intro %} {% endblock %}"/>
+    <meta name="keywords" content="{% block keywords %} {% endblock %}">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-181028377-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-181028377-1');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Ads: 583842853 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-583842853"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-583842853');
+    </script>
+
+
+
+
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top navstyle">
+    <a class="navbar-brand" href="{% url 'index' %}">
+        <img class="logo" src="{% static 'logo/logo.gif'%}" height="457" width="1706" alt="Your Planet">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'aviatravel' %}">Авіатури</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'avtobus' %}">Тури з Луцька</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'proNas' %}">Про нас</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Додаткові послуги</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="{% url 'rannebrony' %}">Раннє бронювання</a>
+                </div>
+            </li>
+
+        </ul>
+        <div class="navinfo">
+            <dl class="header-info_text">
+                <dt>пр-т. Перемоги 21</dt>
+                <dd>
+                    <a class="text_nav_color" href="tel:+380969682493">+3 (809) 696-82-493</a>
+                </dd>
+            </dl>
+            <dl class="header-info_text">
+                <dt>
+                    <span class="icon-mail">Запитуйте</span>
+                </dt>
+                <dd>
+                    <a class="text_nav_color" href="mailto:mytravellutsk@gmail.com">Email</a>
+                </dd>
+            </dl>
+        </div>
+
+             <a href="https://t.me/your_planet"  class="btn  batton"><i class="fa fa-telegram" aria-hidden="true"></i> </a>
+             <a href="https://instagram.com/your_planet_travel"  class="btn batton"><i class="fab fa-instagram" ></i> </a>
+             <a href="https://www.facebook.com/yourplanetlutsk"  class="btn batton"><i class="fab fa-facebook"></i> </a>
+    </div>
+</nav>
+
+<div class="btn_introform btn_introformmin fixed-top">
+
+        <button  type="button" class="btn btn-secondary " data-toggle="modal" data-target="#exampleModalCenter">
+            <i class="fas fa-search"></i>
+        </button>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Підберіть мені тур</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+
+                <form action="send.php" method="post">
+
+
+
+                    <input class="inputfotm" type="text" name="login" placeholder="Ваше ім'я" required>
+                    <input class="inputfotm" type="text" name="pass" placeholder="Країна відпочинку" required>
+                    <p></p>
+                    <input class="inputfotm" type="email" name="email" placeholder="Ваш Email" required>
+                    <input class="inputfotm" type="tel" name="tel" placeholder="Ваш телефон"  required>
+                    <p></p>
+
+
+                    <input type="submit" class="btn btn-secondary" value="Відправити данні" formtarget="_blank">
+
+                </form>
+
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% block content %}
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+<section class="container">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Блок 5 YourPlanet -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6324610722120999"
+     data-ad-slot="6790131872"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</section>
+<footer class="page-footer font-small bg-dark pt-4" >
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-5 mt-md-0 mt-3">
+
+                <!-- Content -->
+                <h3 class="text-uppercase text-color">Your Planet</h3>
+                <p class="text-color text_style">Щаслива людина це та яка має що згадати. Найкращі згадки це згадки про подорожі, цікаві моменти та нові враження від чогось нового побаченого. Потрібно насолоджуватися кожним прожитим моментом колекціонуючи спогади. Моменти та спогади не закінчуються та не мають терміну придатності.</p>
+
+
+            </div>
+
+
+
+
+            <div class="col-md-3 mb-md-0 mb-3">
+                <table>
+                    <tr>
+                        <th><strong>Контакти</strong></th>
+                        <th><strong>Країни</strong></th>
+                    </tr>
+                    <tr>
+                        <td>м.Луцьк пр-т. Перемоги 21</td>
+                        <td><a class="text-color" href="goryachitur.html">Єгипет</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="text_nav_color" href="tel:+380969682493">+3 (809) 696-82-493</a></td>
+                        <td><a class="text-color" href="goryachitur.html">Туреччина</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="icon-mail">Email</span></td>
+                        <td><a class="text-color" href="goryachitur.html">Австрія</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="text_nav_color" href="mailto:mytravellutsk@gmail.com">Email</a></td>
+                        <td><a class="text-color" href="goryachitur.html">Балі</a></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright text-center py-3 text-color fotercopy">2020 Туристична агенція Україна:
+        <a href="index.php">YourPlanet</a>
+        <a  href="https://www.otpusk.com/search/egypt/">Туры</a>
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
